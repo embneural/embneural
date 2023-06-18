@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>深度学习简要介绍 - 嵌入式与深度学习</title>
+        <title>杂项记录 - 嵌入式与深度学习</title>
 
 
         <!-- Custom HTML head -->
@@ -12,21 +12,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -35,7 +35,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="deeplearning/1.深度学习入门介绍.html" class="active">深度学习简要介绍</a></li><li class="chapter-item expanded "><a href="deeplearning/2.手写数字识别.html"><strong aria-hidden="true">1.</strong> 从手写数字识别入门深度学习</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="deeplearning/3.多层感知机(MLP)解析.html"><strong aria-hidden="true">1.1.</strong> 多层感知机(MLP)解析</a></li><li class="chapter-item expanded "><a href="deeplearning/4.交叉熵损失函数.html"><strong aria-hidden="true">1.2.</strong> 交叉熵损失函数介绍</a></li><li class="chapter-item expanded "><a href="deeplearning/5.反向传播算法.html"><strong aria-hidden="true">1.3.</strong> 反向传播算法介绍</a></li></ol></li><li class="chapter-item expanded "><a href="misc/index.html"><strong aria-hidden="true">2.</strong> 杂项记录</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="misc/1.vscode_ssh.html"><strong aria-hidden="true">2.1.</strong> VSCode远程连接实验室windows电脑</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../deeplearning/1.深度学习入门介绍.html">深度学习简要介绍</a></li><li class="chapter-item expanded "><a href="../deeplearning/2.手写数字识别.html"><strong aria-hidden="true">1.</strong> 从手写数字识别入门深度学习</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../deeplearning/3.多层感知机(MLP)解析.html"><strong aria-hidden="true">1.1.</strong> 多层感知机(MLP)解析</a></li><li class="chapter-item expanded "><a href="../deeplearning/4.交叉熵损失函数.html"><strong aria-hidden="true">1.2.</strong> 交叉熵损失函数介绍</a></li><li class="chapter-item expanded "><a href="../deeplearning/5.反向传播算法.html"><strong aria-hidden="true">1.3.</strong> 反向传播算法介绍</a></li></ol></li><li class="chapter-item expanded "><a href="../misc/index.html" class="active"><strong aria-hidden="true">2.</strong> 杂项记录</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/1.vscode_ssh.html"><strong aria-hidden="true">2.1.</strong> VSCode远程连接实验室windows电脑</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -115,7 +115,7 @@
                     <h1 class="menu-title">嵌入式与深度学习</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -145,33 +145,17 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<h2 id="什么是机器学习与深度学习"><a class="header" href="#什么是机器学习与深度学习"><strong>什么是机器学习与深度学习</strong></a></h2>
-<p>机器学习和深度学习本质上是对数据的分析和处理，发现其中的规律、特征或模式，并将其用于分类、识别、预测等目的的一种技术。其中机器学习是利用大量的先验性知识手工提取特征，然后送入到传统的算法进行检测，比如支持向量机（Support Vector Machine, SVM) 、逻辑回归等；深度学习则往往不需要人工加入大量的先验知识，而是让神经网络模型 ( 比如多层感知机（Multilayer Perceptron, MLP）, 卷积网络（Convolutional Neural Networks, CNN ）等）见到大量的样本，并从中自动地归纳并提取出该种类型的样本的通用特征。</p>
-<h2 id="深度学习算法框架选择"><a class="header" href="#深度学习算法框架选择"><strong>深度学习算法框架选择</strong></a></h2>
-<p>深度学习算法方向众多，包括很多方面，比如</p>
-<ul>
-<li>
-<p>计算机视觉（Computer Vision, CV）：计算机视觉是通过算法模型使得计算机能够像人类一样去识别各种各样的物体，比如猫、狗、车等众多物体。该领域包图像分类、目标检测、语义分割、图像生成等众多子领域。</p>
-</li>
-<li>
-<p>自然语言处理（Natural Language Processing, NLP）：NLP旨在让计算机能够理解人类的语言，包括不限于机器翻译、文本分类、文本生成等众多领域。其中最火热的OpenAI的ChatGPT模型就是一个非常大的语言处理模型，它能够在一定程度上理解人类的问题，并给出答案。此外，它还具备文本总结归纳、文本翻译、文本生成等能力。</p>
-</li>
-<li>
-<p>信号处理（Signal Processing）：信号处理是一种通过对信号进行处理和分析来提取信号特征的算法。主要包括语音识别、脑电波信号检测、雷达信号检测、机器运转故障检测等。其中脑电波信号检测可能是未来发展的一个大方向，比如马斯克创办的Neuralink就是主打创造微型的侵入式设备来获取高信噪比的脑电信号，为算法精准地识别到各类脑电信号提供了可能性，从而实现各种各样的应用，比如利用意念精准快速地打字、交流，意念移动物体等超科幻任务。</p>
-</li>
-<li>
-<p>强化学习（Reinforcement Learning, RL）：强化学习是一种通过与环境交互来学习如何做出决策的机器学习方法。它主要应用于游戏、机器人控制、自动驾驶等领域。</p>
-</li>
-</ul>
-<h2 id="算法方向"><a class="header" href="#算法方向"><strong>算法方向</strong></a></h2>
-<p>深度学习是一门涵盖广泛的领域，其中包含着许多不同的子领域和技术。因此，选择一个合适的子领域并投入深入学习是非常重要的。但是不同的子领域之间也存在一定的联系和迁移性。例如，计算机视觉中的卷积神经网络（CNN）可以应用于语音识别中的声学模型，以及检测脑电信号等应用；自然语言处理中的循环神经网络（RNN）可以应用于时间序列预测中的模型。因此，在学习一个子领域的同时，也可以关注其他领域的发展和应用，以便更好地掌握整个深度学习领域。</p>
+<p>记录一些杂事</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../deeplearning/5.反向传播算法.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next" href="deeplearning/2.手写数字识别.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../misc/1.vscode_ssh.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -181,8 +165,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../deeplearning/5.反向传播算法.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next" href="deeplearning/2.手写数字识别.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../misc/1.vscode_ssh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -197,13 +184,13 @@
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
