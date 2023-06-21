@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>VSCode远程连接实验室windows电脑 - 嵌入式与深度学习</title>
+        <title>VSCode远程连接实验室windows电脑 - 嵌入智能</title>
 
 
         <!-- Custom HTML head -->
@@ -112,7 +112,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">嵌入式与深度学习</h1>
+                    <h1 class="menu-title">嵌入智能</h1>
 
                     <div class="right-buttons">
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
@@ -183,16 +183,12 @@ if (!(Get-NetFirewallRule -Name &quot;OpenSSH-Server-In-TCP&quot; -ErrorAction S
 <h2 id="测试远程ssh连接"><a class="header" href="#测试远程ssh连接">测试远程ssh连接</a></h2>
 <p>我们首先在远程的实验室的那台windows电脑上下载 <a href="https://natapp.cn/">NATAPP</a> 这个软件，然后按照官网的教程配置并运行，会出现如下的命令框。
 <img src="./images/10.PNG" alt="" />
-我们只需要关注这一段内容即可</p>
-<pre><code class="language-bash">tcp://server.natappfree.cc:44809 -&gt; 127.0.0.1:22
-</code></pre>
-<p>server.natappfree.cc 表示远程服务器的地址，44809 表示 开启的端口号。
-127.0.0.1:22 不用管。</p>
+我们只需要关注 <strong>Forwarding</strong> 中的内容即可</p>
+<p>这个里面的内容包括了远程映射的ip地址和端口号</p>
 <p>之后我们在本地命令行运行</p>
-<pre><code class="language-bash">ssh admin@server.natappfree.cc -p 44809
+<pre><code class="language-bash">ssh 远程电脑的用户名@远程的地址-p 远程的端口号
 </code></pre>
-<p>其中admin 是我的实验室windows电脑的用户名。
-之后会提示我们需要输入远程实验室windows电脑的密码
+<p>之后会提示我们需要输入远程实验室windows电脑的密码
 <img src="./images/11.PNG" alt="" />
 在输入完密码之后就完成ssh远程连接
 <img src="./images/12.PNG" alt="" /></p>
@@ -208,7 +204,7 @@ Configure SSH Hosts，会出现
 <img src="./images/a_1.png" alt="" /></p>
 <p>之后我们点击第一个，出现如下配置，这是我配置好的ssh文件
 <img src="./images/a_2.png" alt="" /></p>
-<p>然后 把HostName， User， Port 根据需要修改成自己的配置，并保存</p>
+<p>然后 把HostName， User， Port 根据需要修改成自己的配置，并保存。User就是远程电脑的用户名，我的是admin</p>
 <p>继续点击vscode最左下角的那个ssh连接图标，出现
 <img src="./images/a_3.png" alt="" /></p>
 <p>点击 labcompupter后，vscode会提示我们输入密码，输入远程电脑的登录密码即可。最后附上连接成功的效果图
